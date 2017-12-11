@@ -17,7 +17,7 @@ public class LoginTest {
         driver = new ChromeDriver();
     }
     @Test
-    public void login() throws InterruptedException {
+    public void login()  {
 
         driver.get("http://the-internet.herokuapp.com/login");
         driver.manage().window().maximize();
@@ -26,7 +26,7 @@ public class LoginTest {
         //driver.findElement(By.xpath("//i[@class=\"fa fa-2x fa-sign-in\"]"));
         // driver.findElement(By.cssSelector("button[type='submit']")).;
         driver.findElement(By.cssSelector(("#login button"))).click();
-        Thread.sleep(1000);
+
 
         assertTrue("Login was not succeed!",
                 driver.findElement(By.cssSelector(".flash.success")).isDisplayed());
